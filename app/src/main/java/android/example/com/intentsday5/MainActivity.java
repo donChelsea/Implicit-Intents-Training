@@ -58,11 +58,11 @@ public class MainActivity extends AppCompatActivity {
         String txt = mShareTextEditText.getText().toString();
         String mimeType = "text/plain";
         ShareCompat.IntentBuilder
-                .from(this)
-                .setType(mimeType)
-                .setChooserTitle(R.string.share)
-                .setText(txt)
-                .startChooser();
+                .from(this)  //the activity that launches this share intent
+                .setType(mimeType) // the mime type of the item to be shared
+                .setChooserTitle(R.string.share)  // the title that appears on the system app chooser
+                .setText(txt)  // the actual text to be shared
+                .startChooser();  // show system app choose and send intent
     }
 
 
